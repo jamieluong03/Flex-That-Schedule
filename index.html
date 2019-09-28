@@ -119,112 +119,132 @@
     <script>
     $("#currentDay").text("Today is " + moment().format('MMMM Do YYYY, h:mm:ss a'));
 
-    let buttonNine = $("#buttonNine");
-    let buttonTen = $("#buttonTen");
-    let buttonEleven = $("#buttonEleven");
-    let buttonTwelve = $("#buttonTwelve");
-    let buttonOne = $("#buttonOne");
-    let buttonTwo = $("#buttonTwo");
-    let buttonThree = $("#buttonThree");
-    let buttonFour = $("#buttonFour");
-    let buttonFive = $("#buttonFive");
+    // let buttonNine = $("#buttonNine");
+    // let buttonTen = $("#buttonTen");
+    // let buttonEleven = $("#buttonEleven");
+    // let buttonTwelve = $("#buttonTwelve");
+    // let buttonOne = $("#buttonOne");
+    // let buttonTwo = $("#buttonTwo");
+    // let buttonThree = $("#buttonThree");
+    // let buttonFour = $("#buttonFour");
+    // let buttonFive = $("#buttonFive");
 
-    let textArea = $("textarea");
+    // let textArea = $("textarea");
 
-    window.onload = function(){
-      let savedInput = localStorage.getItem("input");
-      console.log(savedInput);
-      if (savedInput){
-      textArea.innerHTML = savedInput;
+    // window.onload = function(){
+      // let savedInput = localStorage.getItem("input");
+      // console.log(savedInput);
+      // if (savedInput){
+      // textArea.innerHTML = savedInput;
 
     //   if (moment().isAfter(exDate)){
     //   textArea.style.backgroundColor = "green";
     // }
+    // }
+
+    // }
+
+
+    // buttonNine.on("click", function (){
+    //   event.preventDefault();
+    //   let inputNine = $("textNine").value;
+    //   localStorage.setItem("nineAM", inputNine);
+    //  console.log(inputNine);
+
+    // })
+
+
+    // buttonTen.on("click", function(){
+    //   event.preventDefault();
+    //   let inputTen = $("textTen").val();
+    //   window.localStorage.setItem("tenAM", inputTen);
+    //  console.log(inputTen);
+    // })
+     
+
+    // buttonEleven.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputEleven = $("textEleven").val();
+    //   window.localStorage.setItem("elevenAM", inputEleven);
+    //  console.log(inputEleven);
+    // })
+     
+    // buttonTwelve.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputTwelve = $("inputTwelve").val();
+    //   window.localStorage.setItem("twelvePM", inputTwelve);
+    //   console.log(inputTwelve);
+    // })
+     
+
+    //  buttonOne.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputOne = $("textOne").val();
+    //   window.localStorage.setItem("onePM", inputOne);
+    //  console.log(inputOne);
+    // })
+     
+
+    //  buttonTwo.on("click", function(){
+    //   event.preventDefault();
+
+    //  let inputTwo = $("textTwo").val();
+    //   window.localStorage.setItem("twoPM", inputTwo);
+    //  console.log(inputTwo); 
+    // })
+     
+
+    //  buttonThree.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputThree = $("textThree").val();
+    //   window.localStorage.setItem("threePM", inputThree);
+    //  console.log(inputThree);
+    // })
+     
+
+    //  buttonFour.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputFour = $("textFour").val();
+    //   window.localStorage.setItem("fourPM", inputFour);
+    //  console.log(inputFour);
+    // })
+     
+
+    //  buttonFive.on("click", function(){
+    //   event.preventDefault();
+
+    //   let inputFive = $("textFive").val();
+    //   window.localStorage.setItem("fivePM", inputFive);
+    //  console.log(inputFive);
+    // })
+    let button = $("button");
+
+    document.addEventListener('DOMContentLoaded', function(){
+      let values = JSON.parse(localStorage.getItem($("textarea")) || '{}');
+      
+      let inputs = $("textarea");
+
+      for (let i=0; i<inputs.length; i++){
+      let x = inputs[i];
+      x.value = values[i] || '';
+
+      x.onchange = function (){
+        values[i] = this.value;
+        localStorage.setItem('inputs', JSON.stringify(values));
+        
+      }
+
     }
-
-    }
-    buttonNine.on("click", function (){
-      event.preventDefault();
-      let inputNine = $("textNine").value;
-      window.localStorage.setItem("nineAM", inputNine);
-     console.log(inputNine);
-
     })
 
 
-    buttonTen.on("click", function(){
-      event.preventDefault();
-      let inputTen = $("textTen").val();
-      window.localStorage.setItem("tenAM", inputTen);
-     console.log(inputTen);
-    })
-     
-
-    buttonEleven.on("click", function(){
-      event.preventDefault();
-
-      let inputEleven = $("textEleven").val();
-      window.localStorage.setItem("elevenAM", inputEleven);
-     console.log(inputEleven);
-    })
-     
-    buttonTwelve.on("click", function(){
-      event.preventDefault();
-
-      let inputTwelve = $("inputTwelve").val();
-      window.localStorage.setItem("twelvePM", inputTwelve);
-      console.log(inputTwelve);
-    })
-     
-
-     buttonOne.on("click", function(){
-      event.preventDefault();
-
-      let inputOne = $("textOne").val();
-      window.localStorage.setItem("onePM", inputOne);
-     console.log(inputOne);
-    })
-     
-
-     buttonTwo.on("click", function(){
-      event.preventDefault();
-
-     let inputTwo = $("textTwo").val();
-      window.localStorage.setItem("twoPM", inputTwo);
-     console.log(inputTwo); 
-    })
-     
-
-     buttonThree.on("click", function(){
-      event.preventDefault();
-
-      let inputThree = $("textThree").val();
-      window.localStorage.setItem("threePM", inputThree);
-     console.log(inputThree);
-    })
-     
-
-     buttonFour.on("click", function(){
-      event.preventDefault();
-
-      let inputFour = $("textFour").val();
-      window.localStorage.setItem("fourPM", inputFour);
-     console.log(inputFour);
-    })
-     
-
-     buttonFive.on("click", function(){
-      event.preventDefault();
-
-      let inputFive = $("textFive").val();
-      window.localStorage.setItem("fivePM", inputFive);
-     console.log(inputFive);
-    })
-     
-
-  
-
-
+   
+    
 
     
 
