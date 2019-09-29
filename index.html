@@ -34,7 +34,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 9AM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textNine" value="9"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="9"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonNine">SAVE</button>
           </div>
@@ -43,7 +43,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">10AM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textTen" value="10"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="10"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonTen">SAVE</button>
           </div>
@@ -52,7 +52,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">11AM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textEleven" value="11"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="11"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonEleven">SAVE</button>
           </div>
@@ -61,7 +61,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">12PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textTwelve" value="12"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="12"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonTwelve">SAVE</button>
           </div>
@@ -70,7 +70,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 1PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textOne" value="13"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="13"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonOne">SAVE</button>
           </div>
@@ -79,7 +79,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 2PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textTwo" value="14"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="14"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonTwo">SAVE</button>
           </div>
@@ -88,7 +88,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 3PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textThree" value="15"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="15"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonThree">SAVE</button>
           </div>
@@ -97,7 +97,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 4PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textFour" value="16"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="16"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonFour">SAVE</button>
           </div>
@@ -106,42 +106,61 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">&nbsp; 5PM</span>
         </div>
-        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="textFive" value="17"></textarea>
+        <textarea type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"- value="17"></textarea>
         <div class="input-group-append">
             <button class="saveBtn btn btn-outline-secondary" type="submit" id="buttonFive">SAVE</button>
           </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="moment.js"></script>
-    <script>
-    $("#currentDay").text("Today is " + moment().format('MMMM Do YYYY, h:mm:ss a'));
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="moment.js"></script>
+<script>
+    
+$("#currentDay").text("Today is " + moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 
-    let button = document.getElementsByClassName("btn");
+let button = document.getElementsByClassName("btn");
 
-    document.addEventListener('DOMContentLoaded', function(){
-      let values = JSON.parse(localStorage.getItem('inputs'));
-      
-      let inputs = $("textarea");
+document.addEventListener('DOMContentLoaded', function(){
+  let values = JSON.parse(localStorage.getItem('inputs'));
+    
+  let inputs = $("textarea");
 
-      for (let i=0; i<inputs.length; i++){
-        let x = inputs[i];
-        x.value = values[i] || '';
+  for (let i=0; i<inputs.length; i++){
+    let x = inputs[i];
+    x.value = values[i] || '';
 
-        button[i].addEventListener('click',function (){
-        values[i] = inputs.val();
-        localStorage.setItem('inputs', JSON.stringify(values));
-        })
-
-      }
+    button[i].addEventListener('click',function (){
+    values[i] = inputs.val();
+    localStorage.setItem('inputs', JSON.stringify(values));
     })
 
+  }
+})
 
-    
-    
+
+  
+console.log(moment().hour())
+
+ 
+$("textarea").each(function(){
+  let hour = $('.form-control').attr('value');
+
+  if (moment().hour() > hour){
+    $('.form-control').attr('class', 'past form-control')
+  }
+  else if (moment().hour() < hour){
+    $('.form-control').attr('class', 'future form-control')
+  }
+  else if (moment().hour() === hour){
+    $('.form-control').attr('class', 'present form-control')
+  }
+  
+});
+  
+
 
     
 
